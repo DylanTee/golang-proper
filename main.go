@@ -42,7 +42,7 @@ func main() {
 func getHandler(w http.ResponseWriter, r *http.Request) {
 	// fmt.Fprintf(w, "version 1")
 	// Create an instance of the response struct
-	response := Response{Message: "3"}
+	response := Response{Message: "4"}
 
 	// Set the response header to indicate JSON content
 	w.Header().Set("Content-Type", "application/json")
@@ -68,10 +68,10 @@ func billCreateHandler(w http.ResponseWriter, r *http.Request) {
 
 	// response := Response{Message: fmt.Sprintf("Hello, %s!", req.Name)}
 
-	apiURL := "https://www.billplz-sandbox.com/api/v3/bills"
+	apiURL := "https://www.billplz.com/api/v3/bills"
 
 	data := url.Values{}
-	data.Set("collection_id", "wvrcysgb")
+	data.Set("collection_id", "yec1sgag")
 	data.Set("description", "proper money subscription")
 	data.Set("email", "aksoonz@gmail.com")
 	data.Set("name", "Dylan Tee")
@@ -86,7 +86,7 @@ func billCreateHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-	req.SetBasicAuth("7fb4b5ef-877d-4293-85d8-c27b11d42e79", "")
+	req.SetBasicAuth("ab8ecbdc-51ec-4d5f-8658-c588a3930c06", "")
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
