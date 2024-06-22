@@ -1,5 +1,7 @@
 cloud.google.com/go v0.115.0 h1:CnFSK6Xo3lDYRoBKEcAtia6VSC837/ZkJuRduSFnr14=
 cloud.google.com/go v0.115.0/go.mod h1:8jIM5vVgoAEoiVxQ/O4BFTfHqulPZgs/ufEzMcFMdWU=
+github.com/billplz/billplz-go v0.0.0-20201029054843-5a9ae429a32c h1:UpL4ObwnPsU6TH38t0uZpUz6isra9ns1zCWXszptYWc=
+github.com/billplz/billplz-go v0.0.0-20201029054843-5a9ae429a32c/go.mod h1:USWOUchPrDVgNPSSJPKPcYu3KX2T0TF8Xfxri/TwJLA=
 github.com/hashicorp/go-cleanhttp v0.5.2 h1:035FKYIWjmULyFRBKPs8TBQoi0x6d9G4xc9neXJWAZQ=
 github.com/hashicorp/go-cleanhttp v0.5.2/go.mod h1:kO/YDlP8L1346E6Sodw+PrpBSV4/SoxCXGY6BqNFT48=
 github.com/hashicorp/go-retryablehttp v0.7.7 h1:C8hUCYzor8PIfXHa4UrZkU4VvK8o9ISHxT2Q8+VepXU=
