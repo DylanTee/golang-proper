@@ -30,5 +30,5 @@ func main() {
 
 // helloRunHandler responds to requests by rendering an HTML page.
 func helloRunHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Coming from Proper Golang")
+	fmt.Fprintf(w, "Coming from Proper Golang!!!")
 }
