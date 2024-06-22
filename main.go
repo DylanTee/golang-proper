@@ -42,7 +42,7 @@ func main() {
 func getHandler(w http.ResponseWriter, r *http.Request) {
 	// fmt.Fprintf(w, "version 1")
 	// Create an instance of the response struct
-	response := Response{Message: "Proper version 1"}
+	response := Response{Message: "Proper version 2"}
 
 	// Set the response header to indicate JSON content
 	w.Header().Set("Content-Type", "application/json")
@@ -94,14 +94,14 @@ func postHandler(w http.ResponseWriter, r *http.Request) {
 	// json.NewEncoder(w).Encode(response)
 
 	// Define the URL and the data
-	apiURL := "https://www.billplz.com/api/v3/bills"
+	apiURL := "https://www.billplz-sandbox.com/api/v3/bills"
 
 	// Data to be sent in the POST request
 	data := url.Values{}
-	data.Set("collection_id", "pb4cttjm5")
-	data.Set("description", "Maecenas eu placerat ante.")
+	data.Set("collection_id", "wvrcysgb")
+	data.Set("description", "proper money subscription")
 	data.Set("email", "aksoonz@gmail.com")
-	data.Set("name", "Sara")
+	data.Set("name", "Dylan Tee")
 	data.Set("amount", "1")
 	data.Set("reference_1_label", "Bank Code")
 	data.Set("reference_1", "BP-FKR01")
@@ -135,4 +135,8 @@ func postHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Print the response body
 	fmt.Println(string(body))
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(resp)
+
 }
