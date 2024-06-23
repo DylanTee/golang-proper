@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"bytes"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -71,6 +72,15 @@ func BillCreateHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("%+v\n", resp)
 	fmt.Println(string(body))
 
+	encodedToken := body // Example base64 encoded byte slice
+	decodedToken, err := base64.StdEncoding.DecodeString(string(encodedToken))
+	if err != nil {
+		fmt.Println("Error decoding token:", err)
+		return
+	}
+
+	fmt.Println("Decoded token:", string(decodedToken))
+
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(body)
+	json.NewEncoder(w).Encode(decodedToken)
 }
