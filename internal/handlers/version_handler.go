@@ -10,7 +10,7 @@ type VersionResponse struct {
 }
 
 func VersionHandler(w http.ResponseWriter, r *http.Request) {
-	response := VersionResponse{Version: "10"}
+	response := VersionResponse{Version: "11"}
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(response)
 }
