@@ -72,5 +72,5 @@ func BillCreateHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(string(body))
 
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(resp.Body)
+	json.NewEncoder(w).Encode(resp.Request.Body)
 }
