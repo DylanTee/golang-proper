@@ -34,17 +34,18 @@ func BillCreateHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Bad request", http.StatusBadRequest)
 		return
 	}
+	fmt.Println(req)
 
 	apiURL := "https://www.billplz.com/api/v3/bills"
 
 	data := url.Values{}
 	data.Set("collection_id", "yec1sgag")
-	data.Set("description", "description")
-	data.Set("email", "aksoonz@hotmail.com")
-	data.Set("name", "Tee")
-	data.Set("amount", "10000")
-	data.Set("reference_1_label", "ref1 label")
-	data.Set("reference_1", "ref1")
+	data.Set("description", req.Description)
+	data.Set("email", req.Email)
+	data.Set("name", req.Name)
+	data.Set("amount", req.Amount)
+	data.Set("reference_1_label", req.ReferenceOneLabel)
+	data.Set("reference_1", req.ReferenceOne)
 	data.Set("callback_url", "https://pr0per.vercel.app/")
 
 	httpReq, err := http.NewRequest("POST", apiURL, bytes.NewBufferString(data.Encode()))
@@ -71,5 +72,5 @@ func BillCreateHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(string(body))
 
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]string{"message": "Bill created successfully"})
+	json.NewEncoder(w).Encode(req)
 }
