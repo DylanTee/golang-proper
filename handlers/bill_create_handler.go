@@ -44,8 +44,8 @@ func BillCreateHandler(w http.ResponseWriter, r *http.Request) {
 	data.Set("email", req.Email)
 	data.Set("name", req.Name)
 	data.Set("amount", req.Amount)
-	data.Set("reference_1_label", req.ReferenceOneLabel)
-	data.Set("reference_1", req.ReferenceOne)
+	data.Set("reference_1_label", "")
+	data.Set("reference_1", "")
 	data.Set("callback_url", "https://api-proper-money.vercel.app/topup/webhook")
 	data.Set("redirect_url", "https://pr0per.vercel.app/topup/receipt")
 
