@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golang-proper/internal/handlers"
+	"golang-proper/handlers"
 	"log"
 	"net/http"
 	"os"
