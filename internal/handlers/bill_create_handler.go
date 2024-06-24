@@ -39,7 +39,7 @@ func BillCreateHandler(w http.ResponseWriter, r *http.Request) {
 	apiURL := "https://www.billplz-sandbox.com/api/v3/bills"
 
 	data := url.Values{}
-	data.Set("collection_id", "yec1sgag")
+	data.Set("collection_id", "wvrcysgb")
 	data.Set("description", req.Description)
 	data.Set("email", req.Email)
 	data.Set("name", req.Name)
