@@ -36,7 +36,7 @@ func BillCreateHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Println(req)
 
-	apiURL := "https://www.billplz-sandbox.com/api/v3/bills"
+	apiURL := "https://www.billplz.com/api/v3/bills"
 
 	data := url.Values{}
 	data.Set("collection_id", "wvrcysgb")
@@ -55,7 +55,7 @@ func BillCreateHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	httpReq.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-	httpReq.SetBasicAuth("7fb4b5ef-877d-4293-85d8-c27b11d42e79", "")
+	httpReq.SetBasicAuth("ab8ecbdc-51ec-4d5f-8658-c588a3930c06", "")
 
 	client := &http.Client{}
 	resp, err := client.Do(httpReq)
